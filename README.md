@@ -5,17 +5,6 @@ This repository contains a set of Jupyter notebooks for exploratory analysis, da
 
 The notebooks are designed as complementary analyses over the same base dataset, moving from data understanding and governance checks to descriptive analytics and hypothesis testing.
 
-## Recommended repository name
-**Retail_Analytics_Statistical_Modeling_Toolkit**
-
-### Other strong alternatives
-- `Retail_Operations_Analytics_Lab`
-- `Retail_Logistics_Product_Analytics`
-- `Retail_Business_Statistics_Portfolio`
-- `Retail_Data_Quality_And_Statistical_Insights`
-
-My main recommendation is **Retail_Analytics_Statistical_Modeling_Toolkit** because it covers the full scope of the repository: data quality, exploratory analysis, business visualization, logistics, and inferential statistics.
-
 ## Main objectives
 - Assess raw retail data quality before analysis.
 - Explore the commercial structure of the product portfolio.
@@ -54,7 +43,7 @@ My main recommendation is **Retail_Analytics_Statistical_Modeling_Toolkit** beca
 ### Data files
 The notebooks reference the following datasets:
 - `Ordenes_productos_C1_M2_Raw.csv` -> raw source dataset
-- `Ordenes_productos_C1_M2.csv` -> cleaned/processed dataset
+- `Ordenes_productos_C1_M2.csv` -> processed dataset
 - Data dictionary file -> variable descriptions, semantic meaning, and field interpretation
 
 > Note: The notebooks load CSV files with `sep=';'` and `encoding='latin-1'`.
@@ -94,7 +83,7 @@ The repository covers the following analytical dimensions:
 - **Chi-square test** for categorical dependency assessment
 
 ## Dataset themes inferred from the notebooks
-The analysis appears to use fields such as:
+The analysis use fields such as:
 - `orden_id`
 - `producto_id`
 - `nombre_categoria_producto`
@@ -119,7 +108,7 @@ Retail_Analytics_Statistical_Modeling_Toolkit/
 │   ├── processed/
 │   │   └── Ordenes_productos_C1_M2.csv
 │   └── dictionary/
-│       └── data_dictionary.csv
+│       └── Diccionario-de-datos-OrdenesPorProducto.ods
 │
 ├── notebooks/
 │   ├── Retail_Data_Quality_Governance_Assessment.ipynb
@@ -131,8 +120,7 @@ Retail_Analytics_Statistical_Modeling_Toolkit/
 │   ├── Retail_Logistics_Freight_Regional_ANOVA_Analysis.ipynb
 │   └── Retail_Market_Structure_Category_Dependency_Analysis.ipynb
 │
-├── README.md
-└── requirements.txt
+└── README.MD
 ```
 
 ## Recommended execution order
@@ -145,31 +133,6 @@ Retail_Analytics_Statistical_Modeling_Toolkit/
 7. `Retail_Logistics_Freight_Regional_ANOVA_Analysis.ipynb`
 8. `Retail_Market_Structure_Category_Dependency_Analysis.ipynb`
 
-## Environment and dependencies
-Suggested Python version:
-- Python 3.10+
-
-Main libraries used across the notebooks:
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `plotly`
-- `scipy`
-- `statsmodels`
-- `jupyter`
-
-Example installation:
-```bash
-pip install pandas numpy matplotlib plotly scipy statsmodels notebook
-```
-
-## How to run
-1. Clone the repository.
-2. Place the raw, cleaned, and dictionary files in the corresponding folders.
-3. Open Jupyter Notebook or JupyterLab.
-4. Update paths if needed.
-5. Execute notebooks in the suggested order.
-
 ## Example use cases
 - Evaluate whether freight costs differ significantly across seller regions.
 - Explore which product categories dominate the portfolio.
@@ -177,19 +140,6 @@ pip install pandas numpy matplotlib plotly scipy statsmodels notebook
 - Check if category distribution depends on seller region.
 - Build an academic or business case combining descriptive and inferential analytics.
 
-## Potential improvements
-- Standardize notebook naming and folder structure.
-- Add a single reusable data-loading utility.
-- Incorporate assumptions checks for statistical tests.
-- Add post-hoc tests after ANOVA, such as Tukey HSD.
-- Add automated data quality reports.
-- Export visualizations and results into presentation-ready outputs.
-- Add `requirements.txt` and environment reproducibility instructions.
-
 ## Notes
 - Some notebooks assume exact column names and direct file paths.
-- At least one notebook file currently appears duplicated in its extension (`.ipynb.ipynb`); renaming it would improve cleanliness.
 - To make the repository more production-ready, consider moving datasets into `data/raw` and `data/processed` and adjusting all notebook paths accordingly.
-
-## License
-Define the license according to your intended use: academic, internal, or open-source distribution.
